@@ -5,7 +5,7 @@ import { Task, TaskInput } from '@/types';
 
 interface TaskFormProps {
   task?: Task | null;
-  onSubmit: (data: TaskInput) => Promise<void>; // Make it async
+  onSubmit: (data: TaskInput) => Promise<void>; 
   onCancel: () => void;
 }
 

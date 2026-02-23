@@ -39,14 +39,11 @@ const TaskSchema = new Schema<ITask>(
     },
   },
   {
-    // ⚡ THIS IS THE ONLY WAY - Let Mongoose handle timestamps
     timestamps: true,
   }
 );
 
-// ⚠️ NO pre-save hook AT ALL - Completely removed
 
-// Transform _id to id when converting to JSON
 TaskSchema.set('toJSON', {
   transform: (doc, ret) => {
     ret.id = ret._id.toString();
